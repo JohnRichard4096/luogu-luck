@@ -131,8 +131,8 @@ TooUnLucky=['大凶','极凶']
 Lucky=['小吉', '中吉','中平','有点吉']+TooLucky
 UnLucky=['凶', '小凶']+TooUnLucky
 Fortune_List=Lucky+UnLucky
-Bold_Font = str(Path(os.path.dirname(os.path.abspath(__file__))/"ttf"/"SourceHanSansCN-Bold.otf"))
-Normal_Font = str(Path(os.path.dirname(os.path.abspath(__file__)))/"ttf"/"SourceHanSansCN-Normal.otf")
+Bold_Font = str(Path(os.path.dirname(os.path.abspath(__file__)/"ttf"/"SourceHanSansCN-Bold.otf")))
+Normal_Font = str(Path(os.path.dirname(os.path.abspath(__file__))/"ttf"/"SourceHanSansCN-Normal.otf"))
 bg_size = (400, 350)
 
 def get_image(nickname:str) -> bytes:
