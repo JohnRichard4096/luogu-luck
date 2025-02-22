@@ -1,0 +1,27 @@
+[project]
+name = "luogu-luck"
+version = "1.0"
+description = "Today's fortune, just like Luogu's!"
+authors = [{ name = "JohnRichard4096", email = "windowserror@163.com" }]
+dependencies = [
+    "nonebot2>=2.2.0",
+    "nonebot-adapter-onebot>=2.0.0",
+    "pillow>=9.2.0",
+    "nonebot-plugin-localstore>=0.7",
+]
+requires-python = ">=3.9, <4.0"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+keywords = ["chat", "suggar", "nonebot"]
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+[project.urls]
+"Homepage" = "https://github.com/JohnRichard4096/luogu-luck"
+"Source" = "https://github.com/JohnRichard4096/luogu-luck"
+"Issue Tracker" = "https://github.com/JohnRichard4096/luogu-luck/issues"
