@@ -1,4 +1,6 @@
 from nonebot.plugin import PluginMetadata
+from nonebot.plugin import require
+require("nonebot_plugin_localstore")
 from . import image
 from . import event
 __plugin_meta__ = PluginMetadata(
