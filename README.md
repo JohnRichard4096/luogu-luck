@@ -14,7 +14,7 @@
 
 ## 安装
 ```shell
-pip install luogu-luck
+pip install nonebot-plugin-luoguluck
 ```
 ## 使用
 ```explaintext
