@@ -6,7 +6,7 @@ from pathlib import Path
 import pickle
 from nonebot_plugin_localstore import get_plugin_data_dir
 
-luck = on_command("luck", aliases={"luck","lucky","运势"}, priority=10)
+luck = on_command("luck", aliases={"luck","lucky","运势"}, priority=10,block=True)
 async def is_same_day(timestamp1:int, timestamp2:int) -> bool:
     # 将时间戳转换为datetime对象，并只保留日期部分
     date1 = datetime.fromtimestamp(timestamp1).date()
@@ -35,22 +35,21 @@ async def _(event:MessageEvent,bot:Bot):
 
     user_conf = data_path/f"{user_id}.pickle"
     timestamp = datetime.now().timestamp()
-    image = get_image(nickname)
-
+    
     if not user_conf.exists():
-
+        image = get_image(nickname)
         with open(str(user_conf),"wb") as f:
              pickle.dump({"last_time":timestamp,"image":image},f)
 
     else:
          
-         image = get_image(nickname)
          with open(str(user_conf),"rb") as f:
               data = pickle.load(f)
 
          if await is_same_day(timestamp,data["last_time"]):
               image = data["image"]
          else:
+              image = get_image(nickname)
               with open(str(user_conf),"wb") as f:
                    pickle.dump({"last_time":timestamp,"image":image},f)
                    
