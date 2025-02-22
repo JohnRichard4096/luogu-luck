@@ -22,4 +22,5 @@ pip install luogu-luck
 ```
 
 样例输出：
+
 ![image](https://github.com/user-attachments/assets/40393908-0450-4653-8e4c-7d9fdc2e618a)
