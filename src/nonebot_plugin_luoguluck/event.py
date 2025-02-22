@@ -5,8 +5,10 @@ from datetime import datetime
 from pathlib import Path
 import pickle
 from nonebot_plugin_localstore import get_plugin_data_dir
+data_path = Path(get_plugin_data_dir())
 
 luck = on_command("luck", aliases={"luck","lucky","运势"}, priority=10,block=True)
+
 async def is_same_day(timestamp1:int, timestamp2:int) -> bool:
     # 将时间戳转换为datetime对象，并只保留日期部分
     date1 = datetime.fromtimestamp(timestamp1).date()
@@ -17,6 +19,7 @@ async def is_same_day(timestamp1:int, timestamp2:int) -> bool:
 
 @luck.handle()
 async def _(event:MessageEvent,bot:Bot):
+    global data_path
     nickname = ""
     user_id = event.user_id
 
@@ -29,7 +32,7 @@ async def _(event:MessageEvent,bot:Bot):
           info = await bot.get_group_member_info(group_id=group_id, user_id=user_id)
           nickname = info['card']
 
-    data_path = Path(get_plugin_data_dir())
+    
     if not data_path.exists():
         data_path.mkdir()
 
