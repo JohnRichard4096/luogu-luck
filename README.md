@@ -24,3 +24,6 @@ pip install nonebot-plugin-luoguluck
 样例输出：
 
 ![image](https://github.com/user-attachments/assets/40393908-0450-4653-8e4c-7d9fdc2e618a)
+
+## 交流
+[加入聊群](https://qm.qq.com/q/ZPlIiTh3OM)
