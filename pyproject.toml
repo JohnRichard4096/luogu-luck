@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-luoguluck"
-version = "0.1"
+version = "0.1.1"
 description = "Today's fortune, just like Luogu's!"
 authors = [{ name = "JohnRichard4096", email = "windowserror@163.com" }]
 dependencies = [
