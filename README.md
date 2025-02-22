@@ -1,3 +1,11 @@
+<div align="center">
+  <a href="https://v2.nonebot.dev/store"><img src="https://github.com/A-kirami/nonebot-plugin-template/blob/resources/nbp_logo.png" width="180" height="180" alt="NoneBotPluginLogo"></a>
+  <br>
+  <p><img src="https://github.com/A-kirami/nonebot-plugin-template/blob/resources/NoneBotPlugin.svg" width="240" alt="NoneBotPluginText"></p>
+</div>
+
+<hr />
+
 # nonebot_plugin_luoguluck
 
 >Today's fortune, just like Luogu's!
@@ -12,3 +20,6 @@ pip install luogu-luck
 ```explaintext
 /luck
 ```
+
+样例输出：
+![image](https://github.com/user-attachments/assets/40393908-0450-4653-8e4c-7d9fdc2e618a)
