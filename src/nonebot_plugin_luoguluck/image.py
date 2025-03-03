@@ -192,7 +192,6 @@ def get_image(nickname:str) -> bytes:
     draw.text(xy=(bg_size[0] / 4 * 3 - tntd_width / 2, begin_pos_y), text='诸事皆宜' if fortune[2:-2] in TooLucky else '忌:', fill='#000000', font=Suitable_To_Do_Font_Bold)
     draw.text(xy=(bg_size[0] / 4 * 3 - tntd_width / 2, begin_pos_y), text='' if fortune[2:-2] in TooLucky else ' ' * 6 + unsuitable_to_do, fill='#000000', font=Suitable_To_Do_Font)
     len_ttd=len(suitable_to_do.split('\n'))
-    print(len_ttd)
     begin_pos_y+=25+25*(len_ttd-1)
     draw.text(xy=(bg_size[0] / 4 - detail_width / 2, begin_pos_y), text=detail, fill='#7f7f7f', font=Detail_Font)
     draw.text(xy=(bg_size[0] / 4 * 3 - detail2_width / 2, begin_pos_y), text=detail2, fill='#7f7f7f', font=Detail_Font)
@@ -203,10 +202,8 @@ def get_image(nickname:str) -> bytes:
     draw.text(xy=(bg_size[0] / 4 * 3 - tntd_width2 / 2, begin_pos_y), text='' if fortune[2:-2] in TooLucky else '忌:', fill='#000000', font=Suitable_To_Do_Font_Bold)
     draw.text(xy=(bg_size[0] / 4 * 3 - tntd_width2 / 2, begin_pos_y), text=' ' * 6 + unsuitable_to_do2, fill='#000000', font=Suitable_To_Do_Font)
     len_ttd2=len(suitable_to_do2.split('\n'))
-    print(len_ttd2)
     begin_pos_y+=25+25*(len_ttd2-1)
     draw.text(xy=(bg_size[0] / 4 - detail3_width / 2, begin_pos_y), text=detail3, fill='#7f7f7f', font=Detail_Font)
     draw.text(xy=(bg_size[0] / 4 * 3 - detail4_width / 2, begin_pos_y), text=detail4, fill='#7f7f7f', font=Detail_Font)
-    print(image_to_base64(img))
     return image_to_base64(img)
 
